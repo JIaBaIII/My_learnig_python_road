@@ -36,18 +36,27 @@
 # class Pupil:
 #     def __init__(self):
 #         self.knowledge = []
-#         print(pup)
 #
 #     def take(self, info):
 #         self.knowledge.append(info)
+#         print(self.knowledge)
 #
-#     def forget_some(self, i_want_to_forget):
-#         self.knowledge.remove(i_want_to_forget)
+#     def forget(self):
+#         self.knowledge.pop()
+#         print(self.knowledge)
 #
 #
-# pup = Pupil
-# somelist = [123, 11, 44]
-
+# pupil = Pupil()
+#
+# pupil.take(123)
+# pupil.take(88)
+# pupil.take(0)
+# pupil.take(16)
+#
+# pupil.forget()
+# pupil.forget()
+# pupil.forget()
+# pupil.forget()
 
 # --------------------------------------------------------------------------------------------------------------------
 # 3 Дан класс Кошка. Кошка имеет вес, имя и пол. Переопределить магический метод __add__() таким образом, чтобы при
@@ -71,7 +80,7 @@
 #
 #     def __add__(self, gen2):
 #         if self.sex == gen2.sex:
-#             print('Мы тут таких не любим... Котятки будут только у гетеро пары, попробуй еще')
+#             print('Мы тут таких не любим... Котятки могут быть только у гетеро пары, попробуй еще')
 #             return None
 #         else:
 #             if self.sex == 'male' or self.sex == 'M' or self.sex == 'm':
@@ -103,9 +112,6 @@
 #         self.weight = weight
 #         self.arg1 = arg1
 #
-#     def __iter__(self):
-#         return self
-#
 #     def __int__(self):
 #         list_of_cats = []
 #         if self.weight is None:
@@ -126,43 +132,38 @@
 # сообщение, какой юнит атаковал, и сколько у противника осталось здоровья. Как только у кого-то заканчивается ресурс
 # здоровья, программа завершается сообщением о том, кто одержал победу.
 
-import random
-
-
-class Warrior:
-    turn = random.randint(1, 2)
-
-    def __init__(self, name, hp=100):
-        self.name = name
-        self.hp = hp
-
-    def __iter__(self):
-        return self
-
-    def __and__(self, other):
-        while self.hp > 0 and other.hp > 0:
-            turn = random.randint(1, 2)
-            print(turn)
-            if turn == 1:
-                other.hp -= 20
-                print(f'Бесстрашный воин {self.name} бьет беднягу \033[35m{other.name}\033[0m на 20 единиц урона!!!!'
-                      f' Отчего у \033[35m{other.name}\033[0m остается \033[35m{other.hp}\033[0m здоровья')
-            elif turn == 2:
-                self.hp -= 20
-                print(f'Ооооох, {other.name} совершает сокрушительную атаку, отнимая у \033[34m{self.name}\033[0m '
-                      f'целых 20 единиц '
-                      f'урона!!! Напряжение наростает, в то время как у \033[34m{self.name}\033[0m осталось'
-                      f' \033[34m{self.hp}\033[0m здоровья')
-        else:
-            if self.hp > other.hp:
-                print(f'У нас победиль !! \033[34m{self.name}\033[0m устоявший на ногах с'
-                      f' \033[34m{self.hp}\033[0m запасом здоровья!')
-            else:
-                print(f'У нас победиль !! \033[35m{other.name}\033[0m устоявший на ногах с'
-                      f' \033[35m{other.hp}\033[0m запасом здоровья!')
-
-
-war_1 = Warrior('Пафнутий')
-war_2 = Warrior('Игорь')
-
-war_1 & war_2
+# import random
+#
+#
+# class Warrior:
+#     def __init__(self, name, hp=100):
+#         self.name = name
+#         self.hp = hp
+#
+#     def __and__(self, other):
+#         while self.hp > 0 and other.hp > 0:
+#             turn = random.randint(1, 2)
+#             print(turn)
+#             if turn == 1:
+#                 other.hp -= 20
+#                 print(f' Бесстрашный воин {self.name} бьет беднягу \033[35m{other.name}\033[0m на 20 единиц урона!!!!'
+#                       f' Отчего у \033[35m{other.name}\033[0m остается \033[35m{other.hp}\033[0m здоровья')
+#             elif turn == 2:
+#                 self.hp -= 20
+#                 print(f'Ооооох, {other.name} совершает сокрушительную атаку, отнимая у \033[34m{self.name}\033[0m'
+#                       f' целых 20 единиц '
+#                       f' урона!!! Напряжение наростает, в то время как у \033[34m{self.name}\033[0m осталось'
+#                       f' \033[34m{self.hp}\033[0m здоровья')
+#         else:
+#             if self.hp > other.hp:
+#                 print(f' У нас победиль !! \033[34m{self.name}\033[0m устоявший на ногах с'
+#                       f' \033[34m{self.hp}\033[0m запасом здоровья!')
+#             else:
+#                 print(f'У нас победиль !! \033[35m{other.name}\033[0m устоявший на ногах с'
+#                       f' \033[35m{other.hp}\033[0m запасом здоровья!')
+#
+#
+# war_1 = Warrior('Пафнутий')
+# war_2 = Warrior('Игорь')
+#
+# war_1 & war_2

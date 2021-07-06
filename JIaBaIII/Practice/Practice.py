@@ -25,12 +25,36 @@
 # vvesti_pyfxtybt()
 
 
-def func_1(argument1, argument2):
-    return argument1 - argument2
+# def func_1(argument1, argument2):
+#     return argument1 - argument2
+#
+#
+# def func_2(drugoi_arg1, drugoi_arg2):
+#     return drugoi_arg1 + drugoi_arg2
+#
+#
+# print(func_1(func_1(10, 5), func_2(10, 5)))
+
+class MyFirstClass:
+    def __init__(self, f1, f2):
+        self.f1 = f1
+        self.f2 = f2
+        print(f1, f2)
+
+    def get_f1(self):
+        return self.f1
+
+    def get_f2(self):
+        return self.f2
+
+    def set_f1(self, new_f1):
+        self.f1 = new_f1
+
+    def set_f2(self, new_f2):
+        self.f2 = new_f2
 
 
-def func_2(drugoi_arg1, drugoi_arg2):
-    return drugoi_arg1 + drugoi_arg2
+mfc = MyFirstClass
+mfc(1, 2)
 
-
-print(func_1(func_1(10, 5), func_2(10, 5)))
+mfc.get_f1()

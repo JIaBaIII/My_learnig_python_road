@@ -1,4 +1,5 @@
 # № 1 (Написать функцию, которая рассчитывает факториал от принятого в нее целочисленного значения (n! или 1*2*3*4*…*n))
+
 # def do_facto(some_munb):
 #     rest = 1
 #     for i in range(1, some_munb + 1):
@@ -260,7 +261,7 @@ backend_response = {
     ]
 }                                           # С третьего пацанского програмирования json спыздел
 
-#
+
 # def find_dict_dno(ny_pognali):
 #     if isinstance(ny_pognali, dict):
 #         return 1 + (max(map(find_dict_dno, ny_pognali.values())) if ny_pognali else 0)
@@ -274,10 +275,43 @@ backend_response = {
 # словарь, и return_type, который принимает в себя тип. Вернуть словарь, составленный из пар ключ/значение, таких,
 #                                                   в которых тип значения совпадает с типом, переданным в return_type.
 
-# new_dict = {}
-# only_result = backend_response['result']
-#
-#
+only_result = backend_response['result']
+dictovshina = [{
+            'post_number': 123352,
+            'post_date': '2019-12-11',
+            'package_items_ids': [
+                1235,
+                234,
+                1234,
+                432,
+                15,
+                11,
+                2
+            ],
+            'city': 'Moscow',
+            'country': 'Russia',
+            'weight': 2100,
+            'flammable': False,
+            'status': 'arrived'
+        },
+        {
+            'post_number': 12345,
+            'post_date': '2019-12-11',
+            'package_items_ids': [
+                1235,
+                1111,
+                1234,
+                432,
+                15,
+                2
+            ],
+            'city': 'Moscow',
+            'country': 'Russia',
+            'weight': 2100,
+            'flammable': True,
+            'status': 'arrived'
+        }]
+
 # def return_dict_by_type(response, return_type):
 #     xena = -1
 #     for elem in response:
@@ -288,6 +322,18 @@ backend_response = {
 #     print(new_dict)
 #
 #
-# return_dict_by_type(only_result, str)
+# return_dict_by_type(only_result, str)                         # Лютый пиздец тут наколдовал)
 
-# Лютый пиздец тут наколдовал)
+
+def take_dict_and_return(response, return_type):
+    new_dict = {'result': 'Посмотрим на результат'}
+    for elem in response:
+        sikr = elem.items()
+        print(type(sikr))
+        for lift in sikr:
+            print(type(lift))
+
+
+
+
+take_dict_and_return(dictovshina, int)

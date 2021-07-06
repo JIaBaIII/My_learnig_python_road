@@ -1,3 +1,6 @@
+# from JIaBaIII.Collor_everything.Colloring import make_txt_bold, make_txt_light_blue, make_txt_italics,\
+#     make_txt_underlined
+
 # class MyFirstClass:
 #     def __init__(self, f1, f2):
 #         self.f1 = f1
@@ -11,27 +14,30 @@
 #
 #     def set_f1(self, new_f1):
 #         self.f1 = new_f1
+#         return new_f1
 #
 #     def set_f2(self, new_f2):
 #         self.f2 = new_f2
+#         return new_f2
 #
 #
 # instance_1 = MyFirstClass(4, 5)
-# print(instance_1.get_f1())
-# print(instance_1.set_f1(2))
-# print(instance_1.get_f1())
+# print(instance_1.get_f2())
+# print(instance_1.set_f1(244122))
 # instance_1.f1 = 9
 # print(instance_1.f1)
-#
+# #
 # print(instance_1.get_f2())
 # instance_1.set_f2(14)
 # print(instance_1.get_f2())
-# instance_1.f2 = 'New line sinema'
+# instance_1.f2 = 'New line cinema'
+# print(instance_1.f2)
 # instance_1.f2 = -9
 # print(instance_1.f2)
 # print(f'{instance_1.f1 + instance_1.f2} - Как говорил один знаменитый классик: "Ну нихуя себе!"')
 
-
+# class Skeleton:
+#
 # class Cock:
 #     def __init__(self, claw, feathers, cockscomb):
 #         self.sk = Skeleton()
@@ -44,32 +50,41 @@
 #         return self.wings.do_stuff()
 
 
-class StaticExampleClass:
-    static_field = 'I\'M STATIC!'
+# class StaticExampleClass:
+#     static_field = 'I\'M STATIC!'
+#
+#     def __init__(self):
+#         self.not_static_field = 'I\'M NOT STATIC!'
+#
+#     def method_example(self):
+#         print(self.static_field)
+#         print(self.not_static_field)
+#
+#
+# example = StaticExampleClass()
+# example.method_example()
+# example_2 = StaticExampleClass()
+# StaticExampleClass.static_field = 'NOW YOU SEE?'
+# example.not_static_field = 'test1'
+# example_2.not_static_field = 'test2'
+# example.method_example()
+# example_2.method_example()
+#
+# example_2.static_field = 'SEE???'
+# example.method_example()
+# example_2.method_example()
+#
+# StaticExampleClass.static_field = 'JUST MAY BE YOU BLIND'
+# example.method_example()
+# example_2.method_example()
 
-    def __init__(self):
-        self.not_static_field = 'I\'M NOT STATIC!'
 
-    def method_example(self):
-        print(self.static_field)
-        print(self.not_static_field)
-
-
-example = StaticExampleClass()
-example.method_example()
-example_2 = StaticExampleClass()
-StaticExampleClass.static_field = 'NOW YOU SEE?'
-example.not_static_field = 'test1'
-example_2.not_static_field = 'test2'
-example.method_example()
-example_2.method_example()
-
-example_2.static_field = 'SEE???'
-example.method_example()
-example_2.method_example()
-
-StaticExampleClass.static_field = 'JUST MAY BE YOU BLIND'
-example.method_example()
-example_2.method_example()
-
-
+# @make_txt_underlined
+# @make_txt_italics
+# @make_txt_bold
+# @make_txt_light_blue
+# def hello():
+#     return "Красивый бирюзовый текст"
+#
+#
+# print(hello())
