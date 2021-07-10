@@ -334,6 +334,4 @@ def take_dict_and_return(response, return_type):
             print(type(lift))
 
 
-
-
 take_dict_and_return(dictovshina, int)

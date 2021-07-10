@@ -10,4 +10,3 @@ if start_moving[0] in Letters and start_moving[1] in Numbers \
     print('Поздравляю, Капитан, вы на доске')
 else:
     print('Что ж.... Это вылет с доски.. ВЫ САМОЕ СЛАБОЕ ЗВЕНО - ПРОЩАЙТЕ')
-

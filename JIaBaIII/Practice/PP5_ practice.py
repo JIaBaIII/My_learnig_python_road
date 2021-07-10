@@ -1,5 +1,7 @@
 # from JIaBaIII.Collor_everything.Colloring import make_txt_bold, make_txt_light_blue, make_txt_italics,\
 #     make_txt_underlined
+from ftplib import FTP
+import emoji
 
 # class MyFirstClass:
 #     def __init__(self, f1, f2):
@@ -34,7 +36,8 @@
 # print(instance_1.f2)
 # instance_1.f2 = -9
 # print(instance_1.f2)
-# print(f'{instance_1.f1 + instance_1.f2} - Как говорил один знаменитый классик: "Ну нихуя себе!"')
+# instance_2 = instance_1.f1 + instance_1.f2
+# print(f'{instance_2} - Как говорил один знаменитый классик: "Ну нихуя себе!"')
 
 # class Skeleton:
 #
@@ -88,3 +91,142 @@
 #
 #
 # print(hello())
+
+
+# class FunctionalList:
+#     """Класс-обёртка над списком с добавлением некоторой функциональной магии: head,
+#     tail, init, last, drop, take."""
+#
+#     def __init__(self, values=None):
+#         if values is None:
+#             self.values = []
+#         else:
+#             self.values = values
+#
+#     def __len__(self):
+#         return len(self.values)
+#
+#     def __getitem__(self, key):
+#         # если значение или тип ключа некорректны, list выбросит исключение
+#         return self.values[key]
+#
+#     def __setitem__(self, key, value):
+#         self.values[key] = value
+#
+#     def __delitem__(self, key):
+#         del self.values[key]
+#
+#     def __iter__(self):
+#         return iter(self.values)
+#
+#     def __reversed__(self):
+#         return FunctionalList(reversed(self.values))
+#
+#     def __call__(self, args):
+#         self.append(args)
+#
+#     def append(self, value):
+#         self.values.append(value)
+#
+#     def head(self):
+#         # получить первый элемент
+#         return self.values[0]
+#
+#     def tail(self):
+#         # получить все элементы после первого
+#         return self.values[1:]
+#
+#     def init(self):
+#         # получить все элементы кроме последнего
+#         return self.values[:-1]
+#
+#     def last(self):
+#         # получить последний элемент
+#         return self.values[-1]
+#
+#     def drop(self, n):
+#         # все элементы кроме первых n
+#         return self.values[n:]
+#
+#     def take(self, n):
+#         # первые n элементов
+#         return self.values[:n]
+#
+#
+# some_key = [44, 11, 48, 'sigma']
+# fu = FunctionalList(some_key)
+# print(fu.head())
+# print(fu.tail())
+# print(fu.__getitem__(1))
+# fu(44)
+# print(fu.values)
+
+# class Entity:
+#     """Класс, описывающий объект на плоскости. "Вызываемый", чтобы обновить позицию объекта."""
+#
+#     def __init__(self, size, x=None, y=None):
+#         self.x, self.y = x, y
+#         self.size = size
+#         print(self.size, x, y)
+#
+#     def __call__(self, x, y):                  # аналогично __set__(self, x, y) Только call не надо звать отдельно
+#         """Изменить положение объекта."""
+#         self.x, self.y = x, y
+#         return self.size, self.x, self.y
+#
+#     # чик...
+#
+#
+# eni = Entity(500, 0, 0.3)
+# print(eni(11, 9))
+# print(eni('Кружечка', 'на столе'))
+
+
+# class Closer:
+#     """Менеджер контекста для автоматического закрытия объекта вызовом метода close
+#     в with-выражении."""
+#
+#     def __init__(self, obj):
+#         self.obj = obj
+#
+#     def __enter__(self):
+#         return self.obj  # привязка к активному объекту with-блока
+#
+#     def __exit__(self, exception_type, exception_val, trace):
+#         try:
+#             self.obj.close()
+#
+#         except AttributeError:  # у объекта нет метода close
+#             print('Not closable.')
+#             return True  # исключение перехвачено
+#
+#
+# with Closer(FTP('ftp.somesite.com')) as conn:
+#     conn.__dir__()
+#
+# # вывод опущен для краткости
+# print(conn.dir())
+#
+# длинное сообщение AttributeError, невозможно использовать закрытое соединение
+# with Closer(int(5)) as i:
+#     while i < 10:
+#         i += 1
+#         print(i)
+
+
+print(emoji.emojize("Omg, its alive! 👍️❤️👍️"))
+print(emoji.emojize("heheeee ❤️👍️❤️"))
+print(emoji.emojize(':Christmas_tree: :OK_hand: :cat: :inbox_tray: :hollow_red_circle: :high_voltage: '
+                    ':heart_on_fire: :headphone: :handshake: :fire: :face_with_head-bandage: '
+                    ':dotted_six-pointed_star: :black_heart: :anguished_face: :alien: :1st_place_medal:'))
+print(emoji.emojize(':Christmas_tree: :OK_hand: :cat: :inbox_tray: :hollow_red_circle: :high_voltage: '
+                    ':heart_on_fire: :headphone: :handshake: :fire: :face_with_head-bandage: '
+                    ':dotted_six-pointed_star: :black_heart: :anguished_face: :alien: :1st_place_medal:',
+                    variant='emoji_type'))
+
+
+list_of_list = [[True, 5, 1], ['-Эти числа такие числа, чуваааак! -Дада! И не говори!! Вечно нас трусами называют((']]
+print(sum(list_of_list, []))
+list_2 = sum(list_of_list, [])
+print(*list_2)
+print(list_2)

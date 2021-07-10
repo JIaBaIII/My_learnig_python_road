@@ -103,8 +103,44 @@
 # --------------------------------------------------------------------------------------------------------------------
 # 4 Написать программу, которая будет сравнивать произвольное количество кошек и сортировать их в порядке возрастания
 # по параметру вес. Эффективность - поебать, но чем больше тем лучше.
-
+# import emoji
 # import random
+#
+# # import random
+# #
+# #
+# # class RandomCatAmount:
+# #     def __init__(self, arg1, weight=None):
+# #         self.weight = weight
+# #         self.arg1 = arg1
+# #
+# #     def __int__(self):
+# #         list_of_cats = []
+# #         if self.weight is None:
+# #             for new_cat in range(0, self.arg1):
+# #                 weight = random.randint(2000, 10000)
+# #                 list_of_cats.append(weight)
+# #         return list_of_cats
+# #
+# #
+# # def comb_sort(list_of_smth):                                             # Вангую - Успешный успех. Я и сам в шоке..
+# #     len_of = len(list_of_smth)
+# #     step = (len_of * 10 // 13) if len_of > 1 else 0
+# #     while step:
+# #         if step < step < len_of:
+# #             step = len_of
+# #         swapped = False
+# #         for i in range(len_of - step):
+# #             if list_of_smth[i + step] < list_of_smth[i]:
+# #                 list_of_smth[i], list_of_smth[i + step] = list_of_smth[i + step], list_of_smth[i]
+# #                 swapped = True
+# #         step = (step * 10 // 13) or swapped
+# #
+# #
+# # rca = RandomCatAmount(20)
+# # list_of_some_cats = rca.__int__()
+# # comb_sort(list_of_some_cats)
+# # print(list_of_some_cats)                                                      # Супер ванильное решение
 #
 #
 # class RandomCatAmount:
@@ -116,13 +152,54 @@
 #         list_of_cats = []
 #         if self.weight is None:
 #             for new_cat in range(0, self.arg1):
-#                 weight = random.randint(2000, 6000)
+#                 weight = random.randint(2000, 10000)
 #                 list_of_cats.append(weight)
 #         return list_of_cats
 #
+#     def __getitem__(self, item):
+#         return int(self.arg1)
 #
-# rca = RandomCatAmount(300)
-# print(sorted(rca.__int__()))                                              # Вангую - Убанское неправильное решение....
+#
+# def point_origin_pussy(arg3):                                            # Еще чуть-чуть добавочноый функции
+#     new_dict = {}
+#     for every_cat in range(len(arg3)):
+#         every_orig_cats = every_cat + 1
+#         # print(emoji.emojize(f'{arg3[every_cat]} <- :cat: была {every_orig_cats}', variant='emoji_type'))
+#         new_dict[f'{arg3[every_cat]}'] = f'{every_orig_cats}'
+#     return new_dict
+#
+#
+# def point_pussy(arg2):                                                   # Добавочная функция
+#     for every_cat in range(len(arg2)):
+#         every_cats = every_cat + 1
+#         cat_elem = arg2[every_cat]
+#         print(emoji.emojize(f"{cat_elem} <- Эта :cat: {every_cats} в списке!"
+#                             f" (А была {origin_dict[f'{cat_elem}']})"))
+#         del origin_dict[f'{cat_elem}']
+#
+#
+# rca = RandomCatAmount(20)
+# # print(sorted(rca.__int__()))                                          # Вангую - Убанское и неправильное решение....
+#
+#
+# def comb_sort(list_of_smth):                                            # Вангую - Успешный успех. Я и сам в шоке..
+#     len_of = len(list_of_smth)
+#     step = (len_of * 10 // 13) if len_of > 1 else 0
+#     while step:
+#         if step < step < len_of:
+#             step = len_of
+#         swapped = False
+#         for i in range(len_of - step):
+#             if list_of_smth[i + step] < list_of_smth[i]:
+#                 list_of_smth[i], list_of_smth[i + step] = list_of_smth[i + step], list_of_smth[i]
+#                 swapped = True
+#         step = (step * 10 // 13) or swapped
+#
+#
+# list_of_some_cats = rca.__int__()
+# origin_dict = point_origin_pussy(list_of_some_cats)
+# comb_sort(list_of_some_cats)
+# point_pussy(list_of_some_cats)
 
 # --------------------------------------------------------------------------------------------------------------------
 # 5  Hard Mode. Задачу нагло спиздил, если честно, но она клевая.
