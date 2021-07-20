@@ -225,8 +225,7 @@ print(emoji.emojize(':Christmas_tree: :OK_hand: :cat: :inbox_tray: :hollow_red_c
                     variant='emoji_type'))
 
 
-list_of_list = [[True, 5, 1], ['-Эти числа такие числа, чуваааак! -Дада! И не говори!! Вечно нас трусами называют((']]
-print(sum(list_of_list, []))
+list_of_list = [[True, 5, 1], ['-Эти числа такие числа, чуваааак!-Дада! И не говори!! Вечно нас трусами называют((']]
 list_2 = sum(list_of_list, [])
-print(*list_2)
 print(list_2)
+print(*list_2)

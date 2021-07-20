@@ -1,3 +1,4 @@
+from collections import defaultdict
 # № 1 (Написать функцию, которая рассчитывает факториал от принятого в нее целочисленного значения (n! или 1*2*3*4*…*n))
 
 # def do_facto(some_munb):
@@ -276,7 +277,7 @@ backend_response = {
 #                                                   в которых тип значения совпадает с типом, переданным в return_type.
 
 only_result = backend_response['result']
-dictovshina = [{
+dictovshina = {'result': [{
             'post_number': 123352,
             'post_date': '2019-12-11',
             'package_items_ids': [
@@ -295,7 +296,7 @@ dictovshina = [{
             'status': 'arrived'
         },
         {
-            'post_number': 12345,
+            'post_number': 54321,
             'post_date': '2019-12-11',
             'package_items_ids': [
                 1235,
@@ -307,31 +308,37 @@ dictovshina = [{
             ],
             'city': 'Moscow',
             'country': 'Russia',
-            'weight': 2100,
+            'weight': 2500,
             'flammable': True,
             'status': 'arrived'
-        }]
+        }]}
+
+# Попробуем решить через двумерные списки
+# def return_dict_by_type(response, return_type):
+#     my_new_list = []
+#     for i in range(len(response)):
+#         every_elem = response[i].items()
+#         listed = list(every_elem)
+#         for j in range(len(listed)):
+#             if type(listed[j][1]) == return_type:
+#                 my_new_list.append([listed[j][0], listed[j][1]])
+#     return dict(my_new_list)
+#
+#
+# print(return_dict_by_type(only_result, return_type=int))  # прошлое неправильное решение, не смог сделать dict из list
+#   -----  -----  -----  -----  -----  -----  -----  -----  -----  -----  -----  -----  -----  -----  -----  -----
+
 
 # def return_dict_by_type(response, return_type):
-#     xena = -1
-#     for elem in response:
-#         xena += 1
-#         for some_type in elem:
-#             if type(response[xena][some_type]) == return_type:
-#                 new_dict[some_type] = elem.values()
-#     print(new_dict)
+#     my_new_list = {'result': []}
+#     for i in range(len(response)):
+#         every_elem = response[i].items()
+#         listed = list(every_elem)
+#         for j in range(len(listed)):
+#             if type(listed[j][1]) == return_type:
+#                 new_new_list = my_new_list['result']
+#                 new_new_list.append({listed[j][0], listed[j][1]})
+#     return my_new_list
 #
 #
-# return_dict_by_type(only_result, str)                         # Лютый пиздец тут наколдовал)
-
-
-def take_dict_and_return(response, return_type):
-    new_dict = {'result': 'Посмотрим на результат'}
-    for elem in response:
-        sikr = elem.items()
-        print(type(sikr))
-        for lift in sikr:
-            print(type(lift))
-
-
-take_dict_and_return(dictovshina, int)
+# print(return_dict_by_type(only_result, return_type=int))  # Топовое решение, карпел над ним часа 3......
