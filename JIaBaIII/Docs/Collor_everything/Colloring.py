@@ -68,3 +68,8 @@ def make_txt_underlined(fn):
     def wrapped():
         return "\033[4m" + fn() + "\033[0m"
     return wrapped
+
+
+def make_txt_0(fn):
+    def wrapped():
+        return "\033[0m" + fn() + "\033[0m"

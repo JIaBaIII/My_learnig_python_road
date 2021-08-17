@@ -1,6 +1,8 @@
 #                                            генератор бредовых фраз
 import random
 
+from JIaBaIII.Docs.How_to_emoji import random_emoji
+
 
 def crazy_frenzy():
     container_for_all = [['Мотыга', 'Балон', 'Карамзит', 'Циркуль', 'Фейхоа', 'Пися', 'Заяц', 'Киркоров', 'Ладья',
@@ -19,9 +21,10 @@ def crazy_frenzy():
     random_noun_index = random.randint(0, len(container_for_all[0]) - 1)
     random_adj_index = random.randint(0, len(container_for_all[1]) - 1)
     random_verb_index = random.randint(0, len(container_for_all[2]) - 1)
+    rendomizzze_emoji = random.randint(0, len(random_emoji()) - 1)
 
     print(container_for_all[0][random_noun_index] + " " + container_for_all[1][random_adj_index]
-          + " " + container_for_all[2][random_verb_index])
+          + " " + container_for_all[2][random_verb_index] + " " + random_emoji()[rendomizzze_emoji])
 
 
 crazy_frenzy()

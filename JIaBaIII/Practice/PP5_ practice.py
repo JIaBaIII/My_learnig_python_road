@@ -1,7 +1,6 @@
 # from JIaBaIII.Collor_everything.Colloring import make_txt_bold, make_txt_light_blue, make_txt_italics,\
 #     make_txt_underlined
 from ftplib import FTP
-import emoji
 
 # class MyFirstClass:
 #     def __init__(self, f1, f2):
@@ -213,19 +212,3 @@ import emoji
 #         i += 1
 #         print(i)
 
-
-print(emoji.emojize("Omg, its alive! 👍️❤️👍️"))
-print(emoji.emojize("heheeee ❤️👍️❤️"))
-print(emoji.emojize(':Christmas_tree: :OK_hand: :cat: :inbox_tray: :hollow_red_circle: :high_voltage: '
-                    ':heart_on_fire: :headphone: :handshake: :fire: :face_with_head-bandage: '
-                    ':dotted_six-pointed_star: :black_heart: :anguished_face: :alien: :1st_place_medal:'))
-print(emoji.emojize(':Christmas_tree: :OK_hand: :cat: :inbox_tray: :hollow_red_circle: :high_voltage: '
-                    ':heart_on_fire: :headphone: :handshake: :fire: :face_with_head-bandage: '
-                    ':dotted_six-pointed_star: :black_heart: :anguished_face: :alien: :1st_place_medal:',
-                    variant='emoji_type'))
-
-
-list_of_list = [[True, 5, 1], ['-Эти числа такие числа, чуваааак!-Дада! И не говори!! Вечно нас трусами называют((']]
-list_2 = sum(list_of_list, [])
-print(list_2)
-print(*list_2)
