@@ -36,5 +36,15 @@
 # print(f'1. s[::-1] = {s[::-1]}')
 # print(f'1. s[-8:] = {s[-8:]}')
 
+stroka_01 = 'Сreate'
+stroka_02 = 'Create'
+list_of_stroka_01 = list(stroka_01)
+list_of_stroka_02 = list(stroka_02)
 
+for i in range(len(list_of_stroka_01)):
+	print(f'letter {list_of_stroka_01[i]} -> code {ord(list_of_stroka_01[i])}')
 
+print('*' * 60)
+
+for i in range(len(list_of_stroka_02)):
+	print(f'letter {list_of_stroka_02[i]} -> code {ord(list_of_stroka_02[i])}')
